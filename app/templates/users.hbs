@@ -1,0 +1,67 @@
+<div class="container col-sm-3">
+	<h2 id="title">List of Users</h2><br>
+  {{#unless isNoUsersToDisplay}}
+	<table>
+      		<thead>
+       			<tr>
+            			<th width="40%">
+                			Active
+            			</th>
+            			<th width="44%">
+                			Profile link
+            			</th>
+	        		<th>
+		        		Actions
+	        		</th>
+        		</tr>
+      		</thead>
+  	</table>
+  		<table class="table-bordered">
+    			<tbody>
+    				{{# each user in content itemController="user"}}
+	      				<tr style="height:50px;">
+            					{{#unless user.isNew}}
+	                				<td width="60%" {{bind-attr class=":col-md-3 :col-sm-3 user.isUserDeactivated:hide-user"}}>
+                      						<h5>
+									{{user.isActive}}
+								</h5>
+	                				</td>
+                  					<td width="60%" {{bind-attr class=":col-md-9 :col-sm-9 user.isUserDeactivated:hide-user"}}>
+                    						{{#link-to 'user' user disabled=user.isUserDeactivated}}
+                        						<h5>
+										{{user.name}}
+									</h5>
+                    						{{/link-to}}
+          						</td>
+	        					<td class="col-md-9 col-sm-9 no-pad">
+                      						{{#if user.isActive}}
+                                    {{#bs-button type="danger" clicked="removeUser" clickedParam=user class="pull-right"}}
+					                            <span class="glyphicon glyphicon-trash"></span>
+                                    {{/bs-button}}
+                      						{{else}}
+                                    {{#bs-button type="info" clicked="activateUser" clickedParam=user class="pull-right"}}
+	                                    <span class="glyphicon glyphicon-eye-close"></span>
+                                    {{/bs-button}}
+                      						{{/if}}
+          						</td>
+            					{{/unless}}
+        				</tr>
+            			{{/each}}
+	      		</tbody>
+      		</table>
+ 	{{else}}
+  		<div class="container center">
+      			<h3>
+				NO USERS TO DISPLAY
+			</h3>
+		</div>
+  	{{/unless}}
+	<br>
+  {{#bs-button type="primary" clicked="addUser" class="pull-right"}}
+	  Add user
+  {{/bs-button}}
+</div>
+
+<div class="container">
+  {{outlet}}
+</div>

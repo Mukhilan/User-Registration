@@ -13,6 +13,16 @@ module.exports = function(environment) {
       }
     },
 
+    contentSecurityPolicy: {
+      'default-src': "'none'",
+      'script-src': "'self' 'unsafe-inline' 'unsafe-eval' use.typekit.net connect.facebook.net maps.googleapis.com maps.gstatic.com",
+      'font-src': "'self' data: use.typekit.net",
+      'connect-src': "'self'",
+      'img-src': "'self' avatars2.githubusercontent.com p.typekit.net avatars3.githubusercontent.com tpstatic.com/img/profile/default_user.jpg",
+      'style-src': "'self' 'unsafe-inline' use.typekit.net",
+      'frame-src': "s-static.ak.facebook.com static.ak.facebook.com www.facebook.com"
+    },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
@@ -40,7 +50,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+      ENV.baseURL = '/user-registration'
   }
 
   return ENV;
