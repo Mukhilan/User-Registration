@@ -16,7 +16,7 @@ user.reopenClass({
     {
       id: 1,
       name: 'Rhett',
-      password:'ticket',
+      password:'pass',
       isActive:true,
       age: '32',
       profileImage: "https://avatars2.githubusercontent.com/u/2503?v=3&s=460",
