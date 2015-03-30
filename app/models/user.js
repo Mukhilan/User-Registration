@@ -15,37 +15,37 @@ user.reopenClass({
   FIXTURES: [
     {
       id: 1,
-      name: 'delip',
+      name: 'Rhett',
       password:'ticket',
       isActive:true,
-      age: '21',
+      age: '32',
       profileImage: "https://avatars2.githubusercontent.com/u/2503?v=3&s=460",
-      phoneNo: "9442625695",
+      phoneNo: "9442625685",
       githubURL: "https://github.com/rsutphin",
       isAdmin: false
     },
 
     {
       id: 2,
-      name: 'vasu',
-      password:'ticket1',
+      name: 'Brian',
+      password:'pass',
       isActive:true,
-      age: '22',
+      age: '36',
       profileImage: "https://avatars3.githubusercontent.com/u/1624?v=3&s=460",
-      phoneNo: "8870388140",
+      phoneNo: "8870378140",
       githubURL: "https://github.com/breakpointer",
       isAdmin: false
     },
 
     {
       id: 3,
-      name: 'ruban',
-      password:'ticket2',
+      name: 'katz',
+      password:'pass',
       isActive:true,
-      age: '21',
-      profileImage: "https://avatars2.githubusercontent.com/u/4624?v=3&s=460",
-      phoneNo: "9443457005",
-      githubURL: "https://github.com/indexzero",
+      age: '35',
+      profileImage: "https://avatars1.githubusercontent.com/u/4?v=3&s=460",
+      phoneNo: "9423457005",
+      githubURL: "https://github.com/wycats",
       isAdmin: true
     }
   ]

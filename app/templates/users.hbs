@@ -35,13 +35,13 @@
           						</td>
 	        					<td class="col-md-9 col-sm-9 no-pad">
                       						{{#if user.isActive}}
-                                    {{#bs-button type="danger" clicked="removeUser" clickedParam=user class="pull-right"}}
-					                            <span class="glyphicon glyphicon-trash"></span>
-                                    {{/bs-button}}
+                                    					{{#bs-button type="danger" clicked="removeUser" clickedParam=user class="pull-right"}}
+					                            		<span class="glyphicon glyphicon-trash"></span>
+                                    					{{/bs-button}}
                       						{{else}}
-                                    {{#bs-button type="info" clicked="activateUser" clickedParam=user class="pull-right"}}
-	                                    <span class="glyphicon glyphicon-eye-close"></span>
-                                    {{/bs-button}}
+                                    					{{#bs-button type="info" clicked="activateUser" clickedParam=user class="pull-right"}}
+	                                    					<span class="glyphicon glyphicon-eye-close"></span>
+                                    					{{/bs-button}}
                       						{{/if}}
           						</td>
             					{{/unless}}
@@ -57,9 +57,9 @@
 		</div>
   	{{/unless}}
 	<br>
-  {{#bs-button type="primary" clicked="addUser" class="pull-right"}}
-	  Add user
-  {{/bs-button}}
+  	{{#bs-button type="primary" clicked="addUser" class="pull-right"}}
+		Add user
+  	{{/bs-button}}
 </div>
 
 <div class="container">

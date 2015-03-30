@@ -50,7 +50,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-      ENV.baseURL = '/user-registration'
+    ENV.locationType = 'hash';
   }
 
   return ENV;

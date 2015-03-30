@@ -1,57 +1,57 @@
 <div class="col-md-9 personal-info"><br>
 	<h3>Personal information</h3>
-		<form class="form-horizontal" role="form">
-			<div class="form-group">
-				<label class="col-lg-3 control-label">Name:</label>
-				<div class="col-lg-8">
-        				{{input class="form-control" type="text" value=content.name}}
-        				{{#if isNameEmpty}}
-			    			<div class="text-danger">Please enter name</div>
-        				{{/if}}
-				</div>
+	<form class="form-horizontal" role="form">
+		<div class="form-group">
+			<label class="col-lg-3 control-label">Name:</label>
+			<div class="col-lg-8">
+       				{{input class="form-control" type="text" value=content.name}}
+       				{{#if isNameEmpty}}
+		    			<div class="text-danger">Please enter name</div>
+       				{{/if}}
 			</div>
-	  		<div class="form-group">
-		  		<label class="col-lg-3 control-label">Password:</label>
-		  		<div class="col-lg-8">
-        				{{input class="form-control" type="password" value=content.password}}
-		  		</div>
+		</div>
+  		<div class="form-group">
+	  		<label class="col-lg-3 control-label">Password:</label>
+	  		<div class="col-lg-8">
+       				{{input class="form-control" type="password" value=content.password}}
 	  		</div>
-	  		<div class="form-group">
-		  		<label class="col-lg-3 control-label">Age:</label>
-		  		<div class="col-lg-8">
-        				{{input class="form-control" type="text" value=content.age}}
-		  		</div>
+  		</div>
+  		<div class="form-group">
+	  		<label class="col-lg-3 control-label">Age:</label>
+	  		<div class="col-lg-8">
+       				{{input class="form-control" type="text" value=content.age}}
 	  		</div>
-	  		<div class="form-group">
-		  		<label class="col-lg-3 control-label">Phone No:</label>
-		  		<div class="col-lg-8">
-				        {{input class="form-control" type="text" value=content.phoneNo}}
-		  		</div>
+	  	</div>
+	  	<div class="form-group">
+		  	<label class="col-lg-3 control-label">Phone No:</label>
+		  	<div class="col-lg-8">
+			        {{input class="form-control" type="text" value=content.phoneNo}}
 	  		</div>
-	  		<div class="form-group">
-		  		<label class="col-lg-3 control-label">GitHub Link:</label>
-		  		<div class="col-lg-8">
-        				{{input class="form-control" type="text" value=content.githubURL}}
-		  		</div>
+	  	</div>
+	  	<div class="form-group">
+	 		<label class="col-lg-3 control-label">GitHub Link:</label>
+	  		<div class="col-lg-8">
+        			{{input class="form-control" type="text" value=content.githubURL}}
+		  	</div>
+	  	</div>
+	  	<div class="form-group">
+	  		<label class="col-lg-3 control-label">Admin:</label>
+		  	<div class="col-lg-8 ">
+          			<div class="checkBox">
+            				{{input type="checkbox" name="isAdmin" checked=content.isAdmin}}
+          			</div>
 	  		</div>
-	  		<div class="form-group">
-		  		<label class="col-lg-3 control-label">Admin:</label>
-		  		<div class="col-lg-8 ">
-          				<div class="checkBox">
-            					{{input type="checkbox" name="isAdmin" checked=content.isAdmin}}
-          				</div>
-		  		</div>
-	  		</div>
-	  		<div class="form-group">
-		  		<label class="col-md-3 control-label"></label>
-		  		<div class="col-md-8">
-          {{#bs-button type="primary" clicked="saveUserDetails"}}
-              Save
-          {{/bs-button}}
+  		</div>
+	  	<div class="form-group">
+	  		<label class="col-md-3 control-label"></label>
+	  		<div class="col-md-8">
+          			{{#bs-button type="primary" clicked="saveUserDetails"}}
+              				Save
+          			{{/bs-button}}
 			  	<span></span>
-          {{#bs-button type="primary" clicked="cancelUserDetails"}}
-              Cancel
-          {{/bs-button}}
+          			{{#bs-button type="primary" clicked="cancelUserDetails"}}
+              				Cancel
+          			{{/bs-button}}
 		  	</div>
 	  	</div>
   	</form>
