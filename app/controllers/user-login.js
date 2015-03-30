@@ -8,24 +8,22 @@ export default Ember.Controller.extend({
       var name = this.get('name'),
           password = this.get('password'),
           usersList = this.get('content'),
-          isValidUser = false,
-          self = this;
+          user= usersList.findBy('name',name);
 
-      usersList.forEach(function(user){
-        if(!isValidUser){
-          if(user.get('name') === name && user.get('password') === password) {
-            isValidUser = true;
-            if(user.get('isAdmin')){
-              self.set('isAdminLogin',true);
-            }
+      if(user) {
+        if(user.get('password') == password) {
+          if(user.get('isAdmin')){
+            this.set('isAdminLogin',true);
+            this.transitionToRoute('users');
+          } else {
+            this.set('isAdminLogin',false);
+            this.transitionToRoute('users');
           }
+        } else {
+          Bootstrap.NM.push("password mismatch","info");
         }
-      });
-
-      if(isValidUser){
-        this.transitionToRoute('users');
       } else {
-        Bootstrap.NM.push("Enter a valid user name or password","info");
+        Bootstrap.NM.push("Enter a valid user name","info");
       }
     }
   }

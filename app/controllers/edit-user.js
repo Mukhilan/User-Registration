@@ -8,8 +8,7 @@ export default Ember.ObjectController.extend(Ember.Validations.Mixin, {
   actions:{
     done: function(){
       var user = this.get('model'),
-          userController = this.get("controllers.user"),
-          self = this;
+          userController = this.get("controllers.user");
       if(user.get("isDirty")){
         this.validate().then(function(){
           user.save().then(function(){

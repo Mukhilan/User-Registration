@@ -1,6 +1,6 @@
 import Ember from "ember";
 
-export default Ember.Controller.extend(Ember.Validations.Mixin ,{
+export default Ember.ObjectController.extend(Ember.Validations.Mixin ,{
   actions:{
     saveUserDetails: function() {
       var user = this.get('content'),
