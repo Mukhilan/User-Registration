@@ -34,6 +34,7 @@ app.import('bower_components/bootstrap/dist/fonts/glyphicons-halflings-regular.w
   destDir: 'fonts'
 });
 app.import('bower_components/ember/ember-template-compiler.js');
+app.import('bower_components/ember-validations/index.js');
 app.import('bower_components/bootstrap/dist/js/bootstrap.js');
 app.import('bower_components/ember-addons.bs_for_ember/dist/js/bs-core.min.js');
 app.import('bower_components/ember-addons.bs_for_ember/dist/js/bs-notifications.min.js');
